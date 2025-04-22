@@ -21,6 +21,8 @@ Compiler, stejně jako člověk, jde dvěmi jednoduchými kroky:
 
 Nutno podotknout že AST je v rodě mužském. Důvod je takový že ho nezajímájí kosmetické části kód jako středníky a nebo složený závorky.
 
+// TODO: ukázka z AST exploreru
+
 ## Proč by nás to mělo vlastně zajímat
 
 ### Intro
@@ -32,7 +34,7 @@ U využití se můžete setkat u třech hlavních tématech:
 - Nástroje statické analýzy - To už by mělo být jasný už z názvu. Analýza statického kódu podle které se můžou už dělat další kroky. Pro javascriptáře takovou statickou analýzu používá babel a nebo eslint. Pokud jste dělali plugin do takového nástroje tak jste se s AST určitě setkali
 - Codemods - Tady už trochu přecházím do automatizace. Pro ty co nevedí co jsou codemods - v jednoduchosti: codemod je nástrojem pro urychlení repetivní práce například při hromadné migraci na nový nástroj a nebo na novou verzi nástroje. Ti lepší to dělají pomocí search and replace, ale pro ty kteří to chtějí mít přesnější a přenositelnější tak rozhodně codemod je jasná volba.
 
-### Whats up, Mods & Gents?
+### Whats up, Mods & Gens?
 
 Pojďmě chvíli zůstat u codemods a codegens. Teda tahle přednáška má být hlavně o nich. Jak jsem už zmínil skrz codemods můžeme jasně a přesně definovat co dělat při nějaké migraci. Typicky při migraci starého zápisu (typicky nějakých libs) do nového.
 Codegens už je samostatné označení nástroji pro generaci kódu. Codegenem můžeme nazvat prakticky cokoliv co nám generuje nějaký kód. Dobrý příkladem může být příkaz `npx create-next-app` který vytvoří nový nextjs projekt i s dalšími akčními kroky.
@@ -106,6 +108,16 @@ Opakem je třeba PHP kde takový AST parser je nativně poskytován. V jazycích
   // TODO: Ukázka zápisu příkazu
   // Příkazy v jednotlivých projektech
 
+## Co vlastně zahrnout do projektové Automatizace
+
+- verze balíků
+  - jak minimální tak i přesné verze
+- struktura package.json
+- configurace eslintu
+- configurace dalších nástrojů
+- konfigurace next.js
+  - změna konfigurace pomocí AST kdy se může přesně určit kam přidat konfiguraci do konfiguracni variable
+-
 
 ## Co Na To AI?
 
