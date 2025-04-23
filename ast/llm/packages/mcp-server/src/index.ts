@@ -1,7 +1,7 @@
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
-import path from "path";
 import z from "zod";
+import { $ } from "execa";
 
 const server = new McpServer({
   name: "workspace-manager",
@@ -14,12 +14,12 @@ const server = new McpServer({
 
 server.tool(
   `create next.js application`,
-  `Creates a next.js application in defined directory`,
+  `Creates a Next.js application workspace with given name`,
   {
     name: z.string().describe("A name of the Next.js application"),
   },
   async ({ name }) => {
-    // Do stuff
+    $`nx create-nx-workspace`;
 
     return {
       content: [
