@@ -1,0 +1,10 @@
+id = "nx-context-server"
+name = "NX Context Server"
+description = "Model Context Server for NX"
+version = "0.0.2"
+schema_version = 1
+authors = ["Ondřej Langr <hi@ondrejlangr.cz>"]
+repository = "https://github.com/zed-extensions/nx-context-server"
+
+[context_servers.nx-context-server]
+name = "NX Context Server"
