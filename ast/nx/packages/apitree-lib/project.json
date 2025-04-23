@@ -1,0 +1,19 @@
+{
+  "name": "apitree-lib",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/apitree-lib/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/apitree-lib",
+        "main": "packages/apitree-lib/src/index.ts",
+        "tsConfig": "packages/apitree-lib/tsconfig.lib.json",
+        "assets": ["packages/apitree-lib/*.md"]
+      }
+    }
+  }
+}

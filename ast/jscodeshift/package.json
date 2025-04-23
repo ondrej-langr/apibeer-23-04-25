@@ -1,0 +1,13 @@
+{
+  "name": "jscodeshift-example",
+  "scripts": {
+    "pretransform": "npx tsc",
+    "transform": "npx jscodeshift --transform ./dist/transformer.js --extensions js,tsx --parser tsx --ignore-pattern **/node_modules/** --print --dry input"
+  },
+  "dependencies": {
+    "@types/jscodeshift": "^17.3.0",
+    "jscodeshift": "^17.3.0",
+    "typescript": "^5.8.3"
+  },
+  "packageManager": "pnpm@9.15.4"
+}

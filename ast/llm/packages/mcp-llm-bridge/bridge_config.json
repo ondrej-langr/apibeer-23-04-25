@@ -1,0 +1,17 @@
+{
+  "mcpServers": {
+    "nx-mcp": {
+      "type": "stdio",
+      "command": "/Users/daichi/Desktop/Work/apitree/apibeer-23-04-25/ast/llm/node_modules/.bin/nx-mcp",
+      "args": ["/Users/daichi/Desktop/Work/apitree/apibeer-23-04-25/ast/nx"]
+    }
+  },
+  "llm": {
+    "model": "gemma3:1b",
+    "baseUrl": "http://localhost:11434",
+    "apiKey": "ollama",
+    "temperature": 0.7,
+    "maxTokens": 1000
+  },
+  "systemPrompt": "You are a helpful assistant that helps with workspace management through nx-mcp. When using these tools, make sure to respect their specific requirements and limitations. Do not try to think of different tools. Make sure to use already provided tool names without modifying the toolname whatsoever."
+}

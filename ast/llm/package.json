@@ -1,0 +1,8 @@
+{
+  "name": "local-llm-example",
+  "packageManager": "pnpm@9.15.4",
+  "scripts": {
+    "start:llm": "pnpm run --filter \"mcp-llm-bridge\" start",
+    "start:server": "pnpm run --filter \"mcp-server\" start"
+  }
+}
